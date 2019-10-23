@@ -1,0 +1,43 @@
+流的分类：
+	根据流的方向分：输入流、输出流
+	根据流的单位分：字节流、字符流
+	根据流的功能分：节点流、处理流
+	
+	字节流输入流：XXXXInputStream
+	字节流输出流：XXXXOutputStream
+	
+	字符流输入流：XXXXReader
+	字符流输出流：XXXXWriter
+
+字节流：一个字节一个字节读取数据（英文、数字各占1个字节，中文GBK编码下占2个字节）
+    
+    	适用于复制文件（文本文档、图片、音频、视频等等）：
+	    	FileInputStream:以字节为单位读取数据    ---字节输入流
+	    	FileOutputStream:以字节为单位写出数据  ---字节输出流
+	    	
+	             访问字节数组：
+	    	ByteArrayInputStream:以字节为单位读取数据    ---字节输入流
+
+字符流：一个字符一个字符读取数据
+
+	            适用于修改文件内容：
+	         FileReader:以字符为单位读取数据        ---字符输入流
+	 	     FileWriter:以字符为单位写出数据        ---字符输出流
+	 	     
+	 	     
+节点流：能够直接访问数据源文件的流
+		FileInputStream input = new FileInputStream("file/file.txt");
+		FileOutputStream output = new FileOutputStream("file/file_bak.txt",true);
+
+		FileReader reader = new FileReader("file/file.txt");
+		FileWriter writer = new FileWriter("file/file_bak.txt");
+
+处理流：不能够直接访问数据源文件的流，每种流具有特定的功能
+
+		BufferedReader reader = new BufferedReader(new FileReader("file/file.txt"));
+			可以一行一行读取数据，特有的方法： readLine() 
+			
+		BufferedWriter writer = new BufferedWriter(new FileWriter("file/file_bak.txt"));
+			可以换行输出数据，特有的方法： newLine() 
+			
+		

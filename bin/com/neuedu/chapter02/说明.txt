@@ -1,0 +1,18 @@
+Collection接口:是一个集合接口，用于保存引用类型的对象，是List与Set的父接口
+
+	List:有序，允许重复
+		ArrayList: 线性存储，查询效率高，新增与删除效率较低
+		LinkedList:链表存储，查询效率较低，新增与删除效率较高
+		
+	Set :无序，不允许重复
+		HashSet:哈希存储
+		TreeSet:二叉树存储，自然顺序排序
+		
+		
+Collections:操作集合的工具类，提供static方法用于访问Collection集合中的元素
+Arrays:操作数组的工具类
+
+Map集合：键值对存储方式
+
+	HashMap、TreeMap、HashTable
+		
